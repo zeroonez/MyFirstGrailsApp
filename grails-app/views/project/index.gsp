@@ -34,12 +34,18 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
+                <th>Date Created</th>
+                <th>Status</th>
+                <th>Source Language</th>
             </tr>
         </thead>
         <tfoot>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
+                <th>Date Created</th>
+                <th>Status</th>
+                <th>Source Language</th>
             </tr>
         </tfoot>
     </table>
@@ -68,6 +74,9 @@ var table = $('#mytable').DataTable( {
 				"columns": [
 					{ "data": "id" },
 					{ "data": "name"},
+					{ "data": "dateCreated"},
+					{ "data": "status"},
+					{ "data": "sourceLang"}
 				]
 			});
 			table.columns().every(function() {

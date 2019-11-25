@@ -1,14 +1,17 @@
-package com.nguyenno.apps.projects;
+package com.nguyenno.apps.projects
 
 class Project {
     private String id
     private String name
     private String externalId
     private String note
+    private String dateCreated
+    private String status
     private boolean displayNoteInProject
     private PriceList priceList
     private NetRateScheme netRateScheme
     private CreatedBy createdBy
+    private String sourceLang
 
     String getId() {
         return id
@@ -72,5 +75,29 @@ class Project {
 
     void setCreatedBy(CreatedBy createdBy) {
         this.createdBy = createdBy
+    }
+
+    String getDateCreated() {
+        return dateCreated
+    }
+
+    void setDateCreated(String dateCreated) {
+        this.dateCreated = dateCreated
+    }
+
+    String getStatus() {
+        return status
+    }
+
+    void setStatus(String status) {
+        this.status = status
+    }
+
+    String getSourceLang() {
+        return sourceLang
+    }
+
+    void setSourceLang(String sourceLang) {
+        this.sourceLang = sourceLang
     }
 }

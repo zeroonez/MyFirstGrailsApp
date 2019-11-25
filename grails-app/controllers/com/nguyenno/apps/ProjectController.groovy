@@ -1,8 +1,5 @@
 package com.nguyenno.apps
 
-import com.nguyenno.apps.ProjectService
-import com.nguyenno.apps.User
-import com.nguyenno.apps.UserService
 import com.nguyenno.apps.projects.Project
 import grails.converters.JSON
 import groovy.transform.CompileStatic
