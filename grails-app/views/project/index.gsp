@@ -39,25 +39,9 @@
                 <th>Source Language</th>
             </tr>
         </thead>
-        <tfoot>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Date Created</th>
-                <th>Status</th>
-                <th>Source Language</th>
-            </tr>
-        </tfoot>
     </table>
 </div>
 <g:javascript>
-$('#mytable tfoot th').each( function() {
-    var title = $(this).text();
-    if (title == 'Extension' || title == 'Hired')
-        $(this).html('<input type="text" size="5" placeholder="' + title + '?" />');
-    else
-        $(this).html('<input type="text" size="15" placeholder="' + title + '?" />');
-});
 var table = $('#mytable').DataTable( {
 				"scrollY": 500,
 				"deferRender": true,
@@ -78,13 +62,6 @@ var table = $('#mytable').DataTable( {
 					{ "data": "status"},
 					{ "data": "sourceLang"}
 				]
-			});
-			table.columns().every(function() {
-				var that = this;
-				$('input', this.footer()).on('keyup change', function(e) {
-					if (that.search() != this.value && 8 < e.keyCode && e.keyCode < 32)
-						that.search(this.value).draw();
-				});
 			});
 </g:javascript>
 </body>

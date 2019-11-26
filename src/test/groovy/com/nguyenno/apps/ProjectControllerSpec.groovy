@@ -1,6 +1,5 @@
-package com.nguyenno.grails
+package com.nguyenno.apps
 
-import com.nguyenno.apps.ProjectController
 import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.Specification
 
